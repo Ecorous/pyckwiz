@@ -4,10 +4,21 @@ import modrinth
 import utils
 import os
 
+"""
+This is a test script for pyckwiz. It tests the following:
+    - Initialization of a packwiz pack
+    - Installation of a mod from curseforge to a packwiz pack
+    - Exporting a packwiz pack to a curseforge zip file
+    - Installation of a mod from modrinth to a packwiz pack
+    - Exporting a packwiz pack to a modrinth mrpack file
+    - Updating a singular mod
+    - Updating all mods
+"""
+
 if not os.path.isdir("pack_test"):
     os.mkdir("pack_test")
 root = os.getcwd()
-packwiz = "packwiz"
+packwiz = "packwiz" # Path to packwiz executable. In this case, it's reading from path.
 os.chdir("pack_test")
 files = os.listdir()
 for file in files:
